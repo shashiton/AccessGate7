@@ -1,2 +1,6 @@
 aiogram
+<<<<<<< HEAD
 requests
+=======
+requests
+>>>>>>> 446e3dfc4c2216b731cf250590fac511c69ae8c1
