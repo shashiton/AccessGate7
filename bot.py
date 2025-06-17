@@ -3,7 +3,6 @@ from aiogram.types import Message
 from aiogram.utils import executor
 import os
 
-# Pull token from environment variable
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN is not set in environment variables")
@@ -21,4 +20,7 @@ async def ping(message: Message):
 
 if __name__ == "__main__":
     print("AG7 Bot is alive ?")
-    executor.start_polling(dp, skip_updates=True)
+    try:
+        executor.start_polling(dp, skip_updates=True)
+    except Exception as e:
+        print(f"AG7 startup error: {e}")
